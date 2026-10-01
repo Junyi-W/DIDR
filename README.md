@@ -19,6 +19,7 @@ Junyi Wu<sup>1</sup>, Weijian Luo<sup>2</sup>, Haoyang Zheng<sup>1</sup>, Ruizhe
 
 ## 📰 News
 
+- **2026-10**: 🎉 DIDR is accepted to **NeurIPS 2026**!
 - **2026-10**: Pretrained weights (1-step SDXL and 1-step Z-Image) released on [Hugging Face](https://huggingface.co/Junyi-W/DIDR).
 - **2026-05**: Paper released on [arXiv](https://arxiv.org/abs/2605.24001).
 

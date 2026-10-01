@@ -39,28 +39,37 @@ Recent advances in one-step text-to-image generation have enabled real-time synt
 
 Preference metrics (↑) and FID (↓) at 1024×1024, showing the reward–fidelity Pareto trade-off. **Bold**: best within each group; multi-step references are shown for reference only.
 
-| Model | Steps | Arch. | Params | PickScore ↑ | ImageReward ↑ | HPSv2.1 ↑ | Aesthetic ↑ | FID ↓ |
-|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| *Multi-step reference* | | | | | | | | |
-| SDXL | 50 | UNet | 2.6B | 22.8 | 0.82 | 28.98 | 5.45 | 15.9 |
-| SDXL-DPO | 50 | UNet | 2.6B | 22.8 | 0.92 | 30.45 | 5.61 | 21.5 |
-| SD3.5-large | 28 | DiT | 8B | 23.0 | 1.01 | 30.06 | 5.42 | 17.7 |
-| FLUX-dev | 50 | DiT | 12B | 23.2 | 1.05 | 30.65 | 5.54 | 24.8 |
-| Z-Image | 50 | DiT | 6B | 22.5 | 0.99 | 30.57 | 5.43 | 14.3 |
-| *One-step SDXL* | | | | | | | | |
-| SDXL DMD2 | 1 | UNet | 2.6B | 22.3 | 0.83 | 29.99 | 5.47 | **13.7** |
-| SDXL Diff-Instruct | 1 | UNet | 2.6B | 22.4 | 0.92 | 31.51 | 5.53 | 19.3 |
-| SDXL Diff-Instruct++ | 1 | UNet | 2.6B | 22.4 | 0.92 | 31.44 | 5.58 | 19.0 |
-| SDXL Diff-Instruct* | 1 | UNet | 2.6B | 23.1 | 1.01 | 33.29 | 5.68 | 18.9 |
-| **SDXL DIDR (Ours)** | 1 | UNet | 2.6B | 23.5 | 1.04 | 33.77 | 5.82 | 18.8 |
-| **SDXL DIDR-longer (Ours)** | 1 | UNet | 2.6B | **23.9** | **1.10** | **33.89** | **5.83** | 20.6 |
-| *Z-Image backbone, 4–8 steps* | | | | | | | | |
-| Z-Image-Turbo | 8 | DiT | 6B | 23.0 | 1.01 | 31.86 | 5.39 | 25.2 |
-| **Z-Image DIDR (Ours)** | 4 | DiT | 6B | **23.1** | **1.09** | **33.62** | **5.59** | **24.8** |
-| *Z-Image backbone, 1–2 steps* | | | | | | | | |
-| Z-Image-Turbo | 1 | DiT | 6B | 21.0 | 0.39 | 24.54 | 4.68 | 36.7 |
-| Z-Image-Turbo | 2 | DiT | 6B | 22.5 | 0.96 | 31.16 | 5.40 | 23.1 |
-| **Z-Image DIDR (Ours)** | 1 | DiT | 6B | **22.6** | **1.08** | **31.40** | **5.46** | **22.1** |
+<div align="center">
+
+<table>
+<thead>
+<tr><th align="left">Model</th><th>Steps</th><th>PickScore ↑</th><th>ImageReward ↑</th><th>HPSv2.1 ↑</th><th>Aesthetic ↑</th><th>FID ↓</th></tr>
+</thead>
+<tbody>
+<tr><td colspan="7"><i>Multi-step reference</i></td></tr>
+<tr><td align="left">SDXL</td><td align="center">50</td><td align="center">22.8</td><td align="center">0.82</td><td align="center">28.98</td><td align="center">5.45</td><td align="center">15.9</td></tr>
+<tr><td align="left">SDXL-DPO</td><td align="center">50</td><td align="center">22.8</td><td align="center">0.92</td><td align="center">30.45</td><td align="center">5.61</td><td align="center">21.5</td></tr>
+<tr><td align="left">SD3.5-large</td><td align="center">28</td><td align="center">23.0</td><td align="center">1.01</td><td align="center">30.06</td><td align="center">5.42</td><td align="center">17.7</td></tr>
+<tr><td align="left">FLUX-dev</td><td align="center">50</td><td align="center">23.2</td><td align="center">1.05</td><td align="center">30.65</td><td align="center">5.54</td><td align="center">24.8</td></tr>
+<tr><td align="left">Z-Image</td><td align="center">50</td><td align="center">22.5</td><td align="center">0.99</td><td align="center">30.57</td><td align="center">5.43</td><td align="center">14.3</td></tr>
+<tr><td colspan="7"><i>One-step SDXL</i></td></tr>
+<tr><td align="left">SDXL DMD2</td><td align="center">1</td><td align="center">22.3</td><td align="center">0.83</td><td align="center">29.99</td><td align="center">5.47</td><td align="center"><b>13.7</b></td></tr>
+<tr><td align="left">SDXL Diff-Instruct</td><td align="center">1</td><td align="center">22.4</td><td align="center">0.92</td><td align="center">31.51</td><td align="center">5.53</td><td align="center">19.3</td></tr>
+<tr><td align="left">SDXL Diff-Instruct++</td><td align="center">1</td><td align="center">22.4</td><td align="center">0.92</td><td align="center">31.44</td><td align="center">5.58</td><td align="center">19.0</td></tr>
+<tr><td align="left">SDXL Diff-Instruct*</td><td align="center">1</td><td align="center">23.1</td><td align="center">1.01</td><td align="center">33.29</td><td align="center">5.68</td><td align="center">18.9</td></tr>
+<tr><td align="left"><b>SDXL DIDR (Ours)</b></td><td align="center">1</td><td align="center">23.5</td><td align="center">1.04</td><td align="center">33.77</td><td align="center">5.82</td><td align="center">18.8</td></tr>
+<tr><td align="left"><b>SDXL DIDR-longer (Ours)</b></td><td align="center">1</td><td align="center"><b>23.9</b></td><td align="center"><b>1.10</b></td><td align="center"><b>33.89</b></td><td align="center"><b>5.83</b></td><td align="center">20.6</td></tr>
+<tr><td colspan="7"><i>Z-Image backbone, 4–8 steps</i></td></tr>
+<tr><td align="left">Z-Image-Turbo</td><td align="center">8</td><td align="center">23.0</td><td align="center">1.01</td><td align="center">31.86</td><td align="center">5.39</td><td align="center">25.2</td></tr>
+<tr><td align="left"><b>Z-Image DIDR (Ours)</b></td><td align="center">4</td><td align="center"><b>23.1</b></td><td align="center"><b>1.09</b></td><td align="center"><b>33.62</b></td><td align="center"><b>5.59</b></td><td align="center"><b>24.8</b></td></tr>
+<tr><td colspan="7"><i>Z-Image backbone, 1–2 steps</i></td></tr>
+<tr><td align="left">Z-Image-Turbo</td><td align="center">1</td><td align="center">21.0</td><td align="center">0.39</td><td align="center">24.54</td><td align="center">4.68</td><td align="center">36.7</td></tr>
+<tr><td align="left">Z-Image-Turbo</td><td align="center">2</td><td align="center">22.5</td><td align="center">0.96</td><td align="center">31.16</td><td align="center">5.40</td><td align="center">23.1</td></tr>
+<tr><td align="left"><b>Z-Image DIDR (Ours)</b></td><td align="center">1</td><td align="center"><b>22.6</b></td><td align="center"><b>1.08</b></td><td align="center"><b>31.40</b></td><td align="center"><b>5.46</b></td><td align="center"><b>22.1</b></td></tr>
+</tbody>
+</table>
+
+</div>
 
 See the paper for text-alignment results (CLIP, DPG, GenEval).
 

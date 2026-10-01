@@ -6,6 +6,7 @@ Junyi Wu<sup>1</sup>, Weijian Luo<sup>2</sup>, Haoyang Zheng<sup>1</sup>, Ruizhe
 
 <sup>1</sup>Purdue University &nbsp;&nbsp; <sup>2</sup>hi-lab, Xiaohongshu Inc.
 
+[![arXiv](https://img.shields.io/badge/arXiv-2605.24001-b31b1b)](https://arxiv.org/abs/2605.24001)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-yellow)](https://huggingface.co/Junyi-W/DIDR)
 
 ![teaser](assets/teaser.jpg)

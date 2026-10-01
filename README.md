@@ -35,6 +35,35 @@ Recent advances in one-step text-to-image generation have enabled real-time synt
 
 **Stage I (TA):** $s_\psi$ tracks the generator marginals via DSM. **Stage II (Generator):** $g_\theta$ is updated toward the reward-tilted target score $\tilde{s}_{\mathrm{ref}} + s_r$.
 
+## Quantitative Results
+
+Preference metrics at 1024×1024 (higher is better). **Bold**: best within each group; multi-step references are shown for reference only.
+
+| Model | Steps | Arch. | Params | PickScore | ImageReward | HPSv2.1 | Aesthetic |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| *Multi-step reference* | | | | | | | |
+| SDXL | 50 | UNet | 2.6B | 22.8 | 0.82 | 28.98 | 5.45 |
+| SDXL-DPO | 50 | UNet | 2.6B | 22.8 | 0.92 | 30.45 | 5.61 |
+| SD3.5-large | 28 | DiT | 8B | 23.0 | 1.01 | 30.06 | 5.42 |
+| FLUX-dev | 50 | DiT | 12B | 23.2 | 1.05 | 30.65 | 5.54 |
+| Z-Image | 50 | DiT | 6B | 22.5 | 0.99 | 30.57 | 5.43 |
+| *One-step SDXL* | | | | | | | |
+| SDXL DMD2 | 1 | UNet | 2.6B | 22.3 | 0.83 | 29.99 | 5.47 |
+| SDXL Diff-Instruct | 1 | UNet | 2.6B | 22.4 | 0.92 | 31.51 | 5.53 |
+| SDXL Diff-Instruct++ | 1 | UNet | 2.6B | 22.4 | 0.92 | 31.44 | 5.58 |
+| SDXL Diff-Instruct* | 1 | UNet | 2.6B | 23.1 | 1.01 | 33.29 | 5.68 |
+| **SDXL DIDR (Ours)** | 1 | UNet | 2.6B | 23.5 | 1.04 | 33.77 | 5.82 |
+| **SDXL DIDR-longer (Ours)** | 1 | UNet | 2.6B | **23.9** | **1.10** | **33.89** | **5.83** |
+| *Z-Image backbone, 4–8 steps* | | | | | | | |
+| Z-Image-Turbo | 8 | DiT | 6B | 23.0 | 1.01 | 31.86 | 5.39 |
+| **Z-Image DIDR (Ours)** | 4 | DiT | 6B | **23.1** | **1.09** | **33.62** | **5.59** |
+| *Z-Image backbone, 1–2 steps* | | | | | | | |
+| Z-Image-Turbo | 1 | DiT | 6B | 21.0 | 0.39 | 24.54 | 4.68 |
+| Z-Image-Turbo | 2 | DiT | 6B | 22.5 | 0.96 | 31.16 | 5.40 |
+| **Z-Image DIDR (Ours)** | 1 | DiT | 6B | **22.6** | **1.08** | **31.40** | **5.46** |
+
+See the paper for text-alignment (CLIP, DPG, GenEval) and FID results.
+
 ## Qualitative Comparison
 
 <div align="center">

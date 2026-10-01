@@ -37,6 +37,12 @@ Recent advances in one-step text-to-image generation have enabled real-time synt
 
 ## Quantitative Results
 
+<div align="center">
+<img src="assets/pareto.png" width="55%" alt="PickScore vs. FID">
+</div>
+
+*PickScore–FID on MSCOCO-2017: DIDR Pareto-dominates all one-step alignment baselines.*
+
 Preference metrics (↑) and FID (↓) at 1024×1024, showing the reward–fidelity Pareto trade-off. **Bold**: best within each group; multi-step references are shown for reference only.
 
 <div align="center">

@@ -85,7 +85,7 @@ See the paper for text-alignment results (CLIP, DPG, GenEval).
 <img src="assets/comparison.jpg" width="100%" alt="Qualitative comparison">
 </div>
 
-One-step SDXL (DIDR, DI++, DI\*, DMD2) and Z-Image (DIDR vs. Z-Image-Turbo at 1 and 8 NFE) at 1024×1024.
+One-step SDXL (DIDR, DI++, DI\*, DMD2) and Z-Image (1-step DIDR vs. Z-Image-Turbo at 1 and 8 NFE) at 1024×1024.
 
 ## Model Zoo
 

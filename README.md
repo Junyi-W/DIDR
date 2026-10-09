@@ -4,7 +4,7 @@
 
 **NeurIPS 2026**
 
-Junyi Wu<sup>1</sup>, Weijian Luo<sup>2</sup>, Haoyang Zheng<sup>1</sup>, Ruizhe Zhang<sup>1</sup>, Guang Lin<sup>1</sup>
+<a href="https://junyi-w.github.io">Junyi Wu</a><sup>1</sup>, Weijian Luo<sup>2</sup>, Haoyang Zheng<sup>1</sup>, Ruizhe Zhang<sup>1</sup>, Guang Lin<sup>1</sup>
 
 <sup>1</sup>Purdue University &nbsp;&nbsp; <sup>2</sup>hi-lab, Xiaohongshu Inc.
 
